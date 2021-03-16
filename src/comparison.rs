@@ -205,7 +205,11 @@ impl Name {
                 if let Some(ref their_part) = their_part_if_any {
                     dbg!(&advance_by);
                     dbg!(&their_part.initials_count());
-                    advance_by -= their_part.initials_count();
+                    if advance_by > their_part.initials_count() {
+                        break;
+                    } else {
+                        advance_by -= their_part.initials_count();
+                    }
                 }
             }
         }
