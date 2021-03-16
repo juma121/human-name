@@ -197,10 +197,14 @@ impl Name {
                 return true;
             }
 
+            
             let mut advance_by = my_part.initials_count();
+            dbg!(&my_part.initials_count);
             while advance_by > 0 && their_part_if_any.is_some() {
                 their_part_if_any = their_parts.next();
                 if let Some(ref their_part) = their_part_if_any {
+                    dbg!(&advance_by);
+                    dbg!(&their_part.initials_count);
                     advance_by -= their_part.initials_count();
                 }
             }
