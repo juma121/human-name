@@ -199,7 +199,7 @@ impl Name {
 
             
             let mut advance_by = my_part.initials_count();
-            dbg!(&my_part.initials_count);
+            
             while advance_by > 0 && their_part_if_any.is_some() {
                 their_part_if_any = their_parts.next();
                 if let Some(ref their_part) = their_part_if_any {
