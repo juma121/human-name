@@ -204,7 +204,7 @@ impl Name {
                 their_part_if_any = their_parts.next();
                 if let Some(ref their_part) = their_part_if_any {
                     dbg!(&advance_by);
-                    dbg!(&their_part.initials_count);
+                    dbg!(&their_part.initials_count());
                     advance_by -= their_part.initials_count();
                 }
             }
