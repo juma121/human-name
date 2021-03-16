@@ -84,7 +84,7 @@ pub fn transliterate(c: char) -> Chars<'static> {
 
 #[inline]
 pub fn to_ascii_letter(c: char) -> Option<char> {
-    debug_assert!(c.is_uppercase(), c.to_string());
+    //debug_assert!(c.is_uppercase(), c.to_string());
     match c {
         'A'..='Z' => Some(c),
         _ => transliterate(c)
